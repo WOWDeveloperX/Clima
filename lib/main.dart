@@ -1,7 +1,6 @@
 import 'package:clima_x/screens/loading_screen.dart';
 import 'package:flutter/material.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
