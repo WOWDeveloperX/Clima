@@ -15,7 +15,7 @@ class NetworkHelper {
     if (response.statusCode == 200) {
       String data = response.body;
 
-      // print(data); //иницилизированное тело ответа
+      print(data); //иницилизированное тело ответа
 
       var decodeData = jsonDecode(data);
 
@@ -25,5 +25,3 @@ class NetworkHelper {
     }
   }
 }
-
-  //  'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey'
