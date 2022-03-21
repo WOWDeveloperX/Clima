@@ -35,4 +35,3 @@ const kTextFieldInputDecoration = InputDecoration(
     borderSide: BorderSide.none, //убрать пограничное поле
   ),
 );
-
