@@ -1,3 +1,5 @@
+import 'package:simple_gradient_text/simple_gradient_text.dart';
+
 import 'package:clima_x/screens/city_screen.dart';
 import 'package:clima_x/services/weather.dart';
 import 'package:clima_x/utilities/constants.dart';
@@ -40,7 +42,7 @@ class _LocationScreenState extends State<LocationScreen> {
       temperature = temp.toInt(); //преобразование двойногочисла в int
 
       var condition = weatherData['weather'][0]['id'];
-      weatherIcon = weather.getWeatherIcon(condition);
+      weatherIcon = weather.getWeatherIcon(condition) as String;
 
       weatherMassage = weather.getMessage(temperature);
 
@@ -76,7 +78,8 @@ class _LocationScreenState extends State<LocationScreen> {
                     },
                     child: Icon(
                       Icons.near_me,
-                      size: 50.0,
+                      size: 40,
+                      color: Colors.cyanAccent.shade100,
                     ),
                   ),
                   TextButton(
@@ -96,32 +99,44 @@ class _LocationScreenState extends State<LocationScreen> {
                     },
                     child: Icon(
                       Icons.location_city,
-                      size: 50.0,
+                      size: 40,
+                      color: Colors.greenAccent.shade100,
                     ),
                   ),
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(left: 15.0),
-                child: Row(
-                  children: <Widget>[
-                    Text(
-                      '$temperature',
-                      style: kTempTextStyle,
+                padding: EdgeInsets.only(right: 15, left: 15),
+                child: Column(
+                  children: [
+                    Center(
+                      child: Row(
+                        children: [
+                          GradientText(
+                            '$temperature',
+                            style: TextStyle(
+                              fontSize: 150,
+                            ),
+                            colors: [
+                              Colors.blue,
+                              Colors.red,
+                              Colors.teal,
+                            ],
+                          ),
+                          SizedBox(width: 30),
+                          Text(
+                            weatherIcon,
+                            style: kConditionTextStyle,
+                          ),
+                        ],
+                      ),
                     ),
                     Text(
-                      weatherIcon,
-                      style: kConditionTextStyle,
+                      '$weatherMassage в $citiName ',
+                      textAlign: TextAlign.right,
+                      style: kMessageTextStyle,
                     ),
                   ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(right: 15.0),
-                child: Text(
-                  '$weatherMassage dress in  $citiName ',
-                  textAlign: TextAlign.right,
-                  style: kMessageTextStyle,
                 ),
               ),
             ],

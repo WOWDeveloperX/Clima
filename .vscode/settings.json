@@ -1,0 +1,4 @@
+{
+    "dart.embedDevTools": false,
+    "dart.openDevTools": "flutter"
+}

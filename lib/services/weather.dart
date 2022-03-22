@@ -39,27 +39,27 @@ class WeatherModel {
     } else if (condition < 600) {
       return '☔️';
     } else if (condition < 700) {
-      return '☃️';
+      return '☃';
     } else if (condition < 800) {
       return '🌫';
     } else if (condition == 800) {
-      return '☀️';
+      return '🔆';
     } else if (condition <= 804) {
       return '☁️';
     } else {
-      return '🤷‍';
+      return '🤷';
     }
   }
 
   String getMessage(int temp) {
     if (temp > 25) {
-      return 'It\'s 🍦 time';
+      return 'Время для🍦';
     } else if (temp > 20) {
-      return 'Time for shorts and 👕';
+      return 'время для шорт и 👕';
     } else if (temp < 10) {
-      return 'You\'ll need 🧣 and 🧤';
+      return 'Одевать 🧣 и 🧤';
     } else {
-      return 'Bring a 🧥 just in case';
+      return 'Прихвати 🧥';
     }
   }
 }

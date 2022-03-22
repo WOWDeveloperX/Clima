@@ -15,7 +15,7 @@ class _CityScreenState extends State<CityScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/city_background.jpg'),
+            image: AssetImage('images/background.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -31,7 +31,8 @@ class _CityScreenState extends State<CityScreen> {
                   },
                   child: Icon(
                     Icons.arrow_back_ios,
-                    size: 50.0,
+                    size: 50,
+                    color: Colors.green,
                   ),
                 ),
               ),
@@ -50,7 +51,7 @@ class _CityScreenState extends State<CityScreen> {
                   Navigator.pop(context, cityName);
                 },
                 child: Text(
-                  'Get Weather',
+                  'Узнать погоду!',
                   style: kButtonTextStyle,
                 ),
               ),

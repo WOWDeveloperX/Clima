@@ -14,7 +14,7 @@ class NetworkHelper {
     if (response.statusCode == 200) {
       String data = response.body;
       print(data); //иницилизированное тело ответа
-      
+
       var decodeData = jsonDecode(data);
       return decodeData;
     } else {
