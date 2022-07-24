@@ -42,7 +42,7 @@ class _LocationScreenState extends State<LocationScreen> {
       temperature = temp.toInt(); //преобразование двойногочисла в int
 
       var condition = weatherData['weather'][0]['id'];
-      weatherIcon = weather.getWeatherIcon(condition) as String;
+      weatherIcon = weather.getWeatherIcon(condition);
 
       weatherMassage = weather.getMessage(temperature);
 

@@ -18,9 +18,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
     super.initState();
   }
 
-  //Япечатаю чисто для вида , чтобы была возможность просто не общаться смамойвики, чтобы
-  //не печататать чтобы
-
   void getLocationData() async {
 // WeatherModel weatherModel = WeatherModel(); //иницилизировал в weatherData
 
